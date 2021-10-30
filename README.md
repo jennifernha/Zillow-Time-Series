@@ -18,18 +18,52 @@ The original dataset for this analyisis consists of ~14,726 rows and 272 variabl
 This project explores 5 different machine learning model types using the SKLearn package: logistic regression, K-Nearest Neighbors, Decision Tree, Random Forest, and Adaboost. Due to overfitting problem, I've decided not to move forward with K-Nearest Neighbors, Decision Tree, and Random Forest models. To further improve the performance, hyperparameter tuning was performed on logistic regression and Adaboost models.
 ***
 ## Results
-Our winning model is the last model we ran in this project, which is a gradient boosting model with hyperparameter tuning to improve precision. This model is the best as we were able to increase the precision by 18.5% with almost no sacrifice to the accuracy and ROC-AUC score. This model also shows that it has the highest threshold when deciding whether a listing is valuable or not, allowing the least room for errors for the Airbnb marketing team when promoting the top 25% listings.
+Our result shows that below 5 zipcodes have positive ROI, and therefore, I recommend investing in properties in below zip codes. 
 
-![result](./images/results1.png)
+**Zip code 92101 (San Diego):** Buy and sell homes within a year. Can wait loger but no true meaning in that after 3 years.
 
-![graph](./images/results2.png)
-***
+
+      Total expected return in 1 year: 10.47%
+      Total expected return in 3 year: 14.06%
+      Total expected return in 5 year: 14.27%
+      Total expected return in 10 year: 14.27%
+                                  
+                                
+**Zip code 91754 (Los Angeles):** Buy and wait for the next 5-10 years. Although can be sold after 5 year term.
+
+      Total expected return in 1 year: 2.6%
+      Total expected return in 3 year: 4.72%
+      Total expected return in 5 year: 5.32%
+      Total expected return in 10 year: 5.54% 
+                                  
+                                  
+**Zip code 92860 (Norco):** Buy and hold for the next 3-5 years. Can wait loger but no true meaning in that after 3 years.
+
+     Total expected return in 1 year: 7.43%
+     Total expected return in 3 year: 11.23%
+     Total expected return in 5 year: 11.82%
+     Total expected return in 10 year: 11.93%
+                            
+**Zip code 93405 (San Luis Obispo):** Buy, flip and sell within a year. Can wait loger but no true meaning in that after 3 years.
+
+     Total expected return in 1 year: 7.43%
+     Total expected return in 3 year: 11.23%
+     Total expected return in 5 year: 11.82%
+     Total expected return in 10 year: 11.93%
+
+**Zip code 93003 (Ventura):** Buy and hold for atleast 10years. Or forgo this market as the ROI is not too high.
+
+     Total expected return in 1 year: 0.26%
+     Total expected return in 3 year: 0.26%
+     Total expected return in 5 year: 0.26%
+     Total expected return in 10 year: 0.26%
+
+
+
 ## Next Steps
-1. **Understand what features make a listing valuable.** Now that we have a model that can help the team to select top 25% listings with the best weighted review scores rating, we can also potentially explore different features to understand which ones have the most impact. As a medium that connects the hosts and the guests, it would be very beneficial for the team and the company to know what connects these two audiences. Having more valuable listings and having a better standard of their listing selections will attract more guests to find a place to stay through Airbnb.
+1. When forecasting home values, there are many other factors to consider besides the actual values. Consider laying in additional data such as population, tax, education, etc.
 
-2. **Re-visit over-fitting models and think about how we can reduce the over-fitting.** While we were able to create a model that we could rely on, I think there is still a chance to further improve the models that we didn't move forward with or that didn't yield the best performance. We won't know the answer until we finish exploring but this can be an interesting study as the best model we have is not the most perfect model.
-
-3. **Consider expanding this project to make predictions using global data.** This project explores the last 12 months of listing data in NYC only and I believe we can expand the business learnings by including listing data from other cities across the globe. Airbnb is a global company that many people use, and there are many other cities people visit every year. The best model we built from this project might not be directly applicable but the iteration process can still be applied. Such a process will help Airbnb to select the most valuable listings very efficiently, which will also provide a better understanding with their overall listings as well as the valuable listings globally.
+2. This data goes only up to 2018. We can potentially explore the data with more recent data.
 
 
 ## For More Information
@@ -40,7 +74,7 @@ For additional info, contact Jennifer Ha at jnha1119@gmail.com
 ```
 ├── data
 ├── images                        
-├── NewYork-Airbnb-Analysis.ipynb   
+├── Zillow_times_series.ipynb   
 ├── Prensentation.pdf  
 ├── README.md                           
 └── functions.py
