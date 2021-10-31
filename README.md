@@ -26,7 +26,7 @@ Our results show that zipcodes in below counties had the highest ROI from April 
 ![ca_top_10](./images/ca_top10_counties.png)
 Out of those zipcodes, we recommend investing in properties in below zip codes. 
 
-**Zip code 91754 (Monterey Park):** Buy and hold for at least 10years or more.
+**Zip code 91754 (Monterey Park):** Buy and hold for at least 10 years or more.
 
 
            Total expected return in 1 year: 2.94%
@@ -43,7 +43,7 @@ Out of those zipcodes, we recommend investing in properties in below zip codes.
            Total expected return in 10 years: 4.49% 
 ![norco](./images/norco.png)                                           
                                   
-**Zip code 96141 (Homewood):** Buy and hold for at least 10years or more.
+**Zip code 96141 (Homewood):** Buy and hold for at least 10 years or more.
 
            Total expected return in 1 year: 9.06%
            Total expected return in 3 years: 26.99%
