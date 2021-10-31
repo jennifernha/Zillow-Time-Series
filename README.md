@@ -76,7 +76,7 @@ Out of those zipcodes, we recommend investing in properties in below zip codes.
 
 
 ## For More Information
-See the full analysis in the [Jupyter Notebook](https://github.com/jennifernha/Zillow-Time-Series/blob/main/Zillow-Times-Series.ipynb) or review this [presentation](https://github.com/jennifernha/NYC-Airbnb-Analysis/blob/main/Presentation.pdf). For additional info, contact Jennifer Ha at jnha1119@gmail.com
+See the full analysis in the [Jupyter Notebook](https://github.com/jennifernha/Zillow-Time-Series/blob/main/Zillow-Times-Series.ipynb) or review this [presentation](https://github.com/jennifernha/Zillow-Time-Series/blob/main/Presentation.pdf). For additional info, contact Jennifer Ha at jnha1119@gmail.com
 ***
 ## Repository Structure
 ```
