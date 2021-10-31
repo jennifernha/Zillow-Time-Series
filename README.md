@@ -4,79 +4,86 @@
 **Author**: Jennifer Ha
 
 ## Overview
-With their recent susscessful housing investment in New York, our client Stellar Property Group seeks to expand their listings in California, which happens to be the other state with the most Fortune 500 company headquarters besides New York. Our client believes the trends and contributing factors that they saw in New York, especially the continued job growth will continue to increase the home values. The team is looking for recommendations on top 5 zipcodes to invest in California, and this analysis will also provide them with short-term vs. long-term investment decisions.
+With their recent successful real estate investment in New York, our client Stellar Property Group seeks to expand their listings in California, which happens to be the other state with the most Fortune 500 company headquarters besides New York. Our client believes the trends and contributing factors that they saw in New York, especially the continued job growth will also positively impact the home values in California. The team is looking for recommendations on top 5 zipcodes to invest in California, and this analysis will also provide them with short-term vs. long-term investment decisions.
 ***
 ## Business Problem
-The goal of this analysis is to identify the top 5 zipcodes for our client to invest in. We have plenty of data to work with but I wanted to be mindful of some finanacial events that happened in the past (e.g. Housing Bubble and Great Despression). Insead of removing these data, I used the coefficient of variantion to take risk into consideration. This is a very common method being used in finance to determine how much volatility, or risk, is assumed in comparison to the amount of retrun expected from investments. I've also selected data in 30-70 quartile to add some variation.
-
-After running some simple time series models, we will use auto_arima on SARIMAX model to determine the best performing parameters for each zipcode. The performance is evaluated using p-value and RMSE, and the recommendation is made based on the predicted ROIs in 1 year, 3 year, 5 year, and 10 yaer.
+The goal of this analysis is to identify the top 5 zipcodes for our client to invest in California. The team is not quite familiar with the West Coast real estate market, and therefore, has asked to take risk factor into consideration. The results from this analysis will provide them with the forecast of next 10 year mean house values in the top 5 zipcodes as well as expected ROI in 1 year, 3 years, 5 years, and 10 years. 
 ***
 ## Data
-The original dataset for this analyisis consists of ~14,726 rows and 272 variables of median monthly housing sales prices from April 1996 through 2018 as repored by Zillow. Each row represents a unique zip code indexed with RegioinID, and contains location info and median housing sales prices for each month.
+The dataset for this analysis comes from [Zillow Research](https://www.zillow.com/research/data/), which contains the median home sales prices in 14,723 individual zipcodes from April 1996 through April 2018. Each row represents a unique zip code indexed with RegioinID, and contains location info and median housing sales prices for each month.
+
 ***
 ## Methods
-This project explores 5 different machine learning model types using the SKLearn package: logistic regression, K-Nearest Neighbors, Decision Tree, Random Forest, and Adaboost. Due to overfitting problem, I've decided not to move forward with K-Nearest Neighbors, Decision Tree, and Random Forest models. To further improve the performance, hyperparameter tuning was performed on logistic regression and Adaboost models.
+This project explores zipcodes in California only (1,224 zipcodes), and calculates average home values from April 1996 to April 1998 to narrow down the list for modeling with top 10 zipcodes with the highest ROI. 
+
+I wanted to be mindful of some financial events that happened in the past (e.g. Housing Bubble and Great Recession, and used the [coefficient of variantion](https://www.investopedia.com/terms/c/coefficientofvariation.asp) to take risk into consideration. This is a very common method being used in finance to determine how much volatility, or risk, is assumed in comparison to the amount of return expected from investments. I've also selected data in 30-70 quartiles to add some variation.
+
+After running some simple time series models, we will use the SARIMAX model to forecast the predicted average home values for each zipcode. Then, we will decide the top 5 zipcodes with the highest predicted ROIs in 1 year, 3 years, 5 years, and 10 years. 
+
 ***
-## Results
-Our result shows that below 5 zipcodes have positive ROI, and therefore, I recommend investing in properties in below zip codes. 
+## Conclusion & Recommendation
+Our results show that zipcodes in below counties had the highest ROI from April 1996 to April 2018.
+![ca_top_10](./images/ca_top10_counties.png)
+Out of those zipcodes, we recommend investing in properties in below zip codes. 
 
-**Zip code 92101 (San Diego):** Buy and sell homes within a year. Can wait loger but no true meaning in that after 3 years.
+**Zip code 91754 (Monterey Park):** Buy and hold for at least 10years or more.
 
 
-      Total expected return in 1 year: 10.47%
-      Total expected return in 3 year: 14.06%
-      Total expected return in 5 year: 14.27%
-      Total expected return in 10 year: 14.27%
-                                  
+           Total expected return in 1 year: 2.94%
+           Total expected return in 3 years: 8.74%
+           Total expected return in 5 years: 14.42%
+           Total expected return in 10 years: 27.9 %
+![monterey](./images/monterey.png)                                  
                                 
-**Zip code 91754 (Los Angeles):** Buy and wait for the next 5-10 years. Although can be sold after 5 year term.
+**Zip code 92860 (Norco):** Buy and hold for at least 3 years.
 
-      Total expected return in 1 year: 2.6%
-      Total expected return in 3 year: 4.72%
-      Total expected return in 5 year: 5.32%
-      Total expected return in 10 year: 5.54% 
+           Total expected return in 1 year: 2.81%
+           Total expected return in 3 years: 4.25%
+           Total expected return in 5 years: 4.45%
+           Total expected return in 10 years: 4.49% 
+![norco](./images/norco.png)                                           
                                   
-                                  
-**Zip code 92860 (Norco):** Buy and hold for the next 3-5 years. Can wait loger but no true meaning in that after 3 years.
+**Zip code 96141 (Homewood):** Buy and hold for at least 10years or more.
 
-     Total expected return in 1 year: 7.43%
-     Total expected return in 3 year: 11.23%
-     Total expected return in 5 year: 11.82%
-     Total expected return in 10 year: 11.93%
-                            
-**Zip code 93405 (San Luis Obispo):** Buy, flip and sell within a year. Can wait loger but no true meaning in that after 3 years.
+           Total expected return in 1 year: 9.06%
+           Total expected return in 3 years: 26.99%
+           Total expected return in 5 years: 44.99%
+           Total expected return in 10 years: 89.22%
+ ![homewood](./images/homewood.png)         
 
-     Total expected return in 1 year: 7.43%
-     Total expected return in 3 year: 11.23%
-     Total expected return in 5 year: 11.82%
-     Total expected return in 10 year: 11.93%
+**Zip code 93405 (San Luis Obispo):** Buy and hold for at least 3-5 years.
 
-**Zip code 93003 (Ventura):** Buy and hold for atleast 10years. Or forgo this market as the ROI is not too high.
+           Total expected return in 1 year: 2.01%
+           Total expected return in 3 years: 3.55%
+           Total expected return in 5 years: 3.95%
+           Total expected return in 10 years 4.08%
+ ![san_luis_obispo](./images/san_luis_obispo.png) 
 
-     Total expected return in 1 year: 0.26%
-     Total expected return in 3 year: 0.26%
-     Total expected return in 5 year: 0.26%
-     Total expected return in 10 year: 0.26%
+**Zip code 94546 (Castro Valley):** Buy and hold for at least 10 years or more.
 
+           Total expected return in 1 year: 3.19%
+           Total expected return in 3 years: 9.5%
+           Total expected return in 5 years: 15.72%
+           Total expected return in 10 years: 30.62%
+ ![castro_valley](./images/castro_valley.png) 
 
+***
+## Next Steps:
+1. This project was purely based on using past average home values to make predictions for the next 10 years. The analysis can be more meaningful if we could take other contributing factors for a home value, such as population, tax rate, and school ranking into consideration.
 
-## Next Steps
-1. When forecasting home values, there are many other factors to consider besides the actual values. Consider laying in additional data such as population, tax, education, etc.
-
-2. This data goes only up to 2018. We can potentially explore the data with more recent data.
+2. We can potentially add more recent data to increase the effectiveness of the model. It would be interesting to examine if any recent events like COVID-19 have affected the real estate market.
 
 
 ## For More Information
-See the full analysis in the [Jupyter Notebook](https://github.com/jennifernha/NYC-Airbnb-Analysis/blob/main/NewYork-Airbnb-Analysis.ipynb) or review this [presentation](https://github.com/jennifernha/NYC-Airbnb-Analysis/blob/main/Presentation.pdf).
-For additional info, contact Jennifer Ha at jnha1119@gmail.com
+See the full analysis in the [Jupyter Notebook](https://github.com/jennifernha/Zillow-Time-Series/blob/main/Zillow-Times-Series.ipynb) or review this [presentation](https://github.com/jennifernha/NYC-Airbnb-Analysis/blob/main/Presentation.pdf). For additional info, contact Jennifer Ha at jnha1119@gmail.com
 ***
 ## Repository Structure
 ```
 ├── data
-├── images                        
+├── images 
+├── README.md                         
 ├── Zillow_times_series.ipynb   
-├── Prensentation.pdf  
-├── README.md                           
+├── Prensentation.pdf                      
 └── functions.py
   
   
