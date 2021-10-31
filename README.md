@@ -25,6 +25,7 @@ After running some simple time series models, we will use the SARIMAX model to f
 Our results show that zipcodes in below counties had the highest ROI from April 1996 to April 2018.
 ![ca_top_10](./images/ca_top10_counties.png)
 Out of those zipcodes, we recommend investing in properties in below zip codes. 
+![map](./images/map.png) 
 
 **Zip code 91754 (Monterey Park):** Buy and hold for at least 10 years or more.
 
