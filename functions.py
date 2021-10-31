@@ -12,15 +12,12 @@ warnings.filterwarnings('ignore')
 
 from math import sqrt
 
-from statsmodels.tsa.seasonal import seasonal_decompose
-from statsmodels.tsa.stattools import adfuller, acf, pacf
+from statsmodels.tsa.stattools import adfuller
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tsa.statespace.sarimax import SARIMAX
-import pmdarima as pm
 from pmdarima import auto_arima
 
-from sklearn import metrics
 from sklearn.metrics import mean_squared_error
 
 
@@ -70,41 +67,3 @@ def plot_acf_pacf(ts, figsize=(10,8),lags=24):
         a.xaxis.set_major_locator(mpl.ticker.MaxNLocator(min_n_ticks=lags, integer=True))
         a.xaxis.grid()
     return fig,ax
-
-def model_fit(df,pdq=(1,0,1),pdqs=(0,0,0,1)):
-    train, test = train_test(df)
-    model = SARIMAX(train,order=pdq,seasonal_order=pdqs)
-    results = model.fit()
-    results.summary
-    residuals = results.resid
-    print(results.summary())
-    results.plot_diagnostics(figsize=(11,8))
-    plt.show();
-    return train, test, results
-
-def forecast_model(df,pdq=(1,0,1),pdqs=(0,0,0,12), display=True,zc='input zipcode'):
-    model = SARIMAX(df, order=pdq,seasonal_order=pdqs)
-    model_fit = model.fit()
-    output = model_fit.get_prediction(start='2018-04',end='2028-04', dynamic=True)
-
-    forecast_ci = output.conf_int()
-    if display:
-        fig, ax = plt.subplots(figsize=(13,6))
-        output.predicted_mean.plot(label='Forecast')
-        ax.fill_between(forecast_ci.index,forecast_ci.iloc[:, 0],forecast_ci.iloc[:, 1],
-                        color='k', alpha=.25,label='Conf Interval')
-        plt.title('Forecast of Monthly Returns')
-        plt.xlabel('Time')
-        plt.legend(loc='best')
-        plt.show()
-#     year_1= (1+output.predicted_mean[:12]).prod()-1
-    year_1= (1+output.predicted_mean[:12]).prod()-1
-    year_3=(1+output.predicted_mean[:36]).prod()-1
-    year_5= (1+output.predicted_mean[:60]).prod()-1
-    year_10=(1+output.predicted_mean).prod()-1
-    print(f'Total expected return in 1 year: {round(year_1*100,2)}%')
-    print(f'Total expected return in 3 years: {round(year_3*100,2)}%')
-    print(f'Total expected return in 5 year: {round(year_5*100,2)}%')
-    print(f'Total expected return in 10 years: {round(year_10*100,2)}%')
-    tot_ret = [zc,year_1,year_3,year_5,year_10]
-    return tot_ret
