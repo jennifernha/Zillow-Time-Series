@@ -22,7 +22,7 @@ Our results show that zipcodes in below counties had the highest ROI between Apr
 
 ![ca_top_10](./images/ca_top10_counties.png)
 
-For prediction, I ran some time series models, and selected the SARIMAX model that performed the best to forecast the predicted average home values for each zipcode for next 10 years (2018-2028).
+For prediction, I ran some time series models, and selected the SARIMAX model that performed the best to forecast the predicted average home values for each zipcode for the next 10 years (2018-2028).
 
 ***
 ## Conclusion & Recommendation
@@ -30,7 +30,7 @@ Below are the top 5 zipcodes that showed the highest ROI, and the recommendation
 
 ![map](./images/map.png) 
 
-**Zip code 91754 (Orange):** Buy and hold for at least 10 years or more.
+**Zip code 91754 (Orange):** Buy and hold for at least 10 years.
 
 
            Total expected return in 1 year: 2.94%
@@ -47,7 +47,7 @@ Below are the top 5 zipcodes that showed the highest ROI, and the recommendation
            Total expected return in 10 years: 4.49% 
 ![norco](./images/norco.png)                                           
                                   
-**Zip code 96141 (Placer):** Buy and hold for at least 10 years or more.
+**Zip code 96141 (Placer):** Buy and hold for at least 10 years.
 
            Total expected return in 1 year: 9.06%
            Total expected return in 3 years: 26.99%
@@ -63,7 +63,7 @@ Below are the top 5 zipcodes that showed the highest ROI, and the recommendation
            Total expected return in 10 years 4.08%
  ![san_luis_obispo](./images/san_luis_obispo.png) 
 
-**Zip code 94546 (Alameda):** Buy and hold for at least 10 years or more.
+**Zip code 94546 (Alameda):** Buy and hold for at least 10 years.
 
            Total expected return in 1 year: 3.19%
            Total expected return in 3 years: 9.50%
@@ -73,9 +73,9 @@ Below are the top 5 zipcodes that showed the highest ROI, and the recommendation
 
 ***
 ## Next Steps:
-1. This project was purely based on using past average home values to make predictions for the next 10 years. The analysis can be more meaningful if we could take other contributing factors for a home value, such as population, tax rate, and school ranking into consideration.
+1. We can potentially add more recent data to increase the effectiveness of the model. It would be interesting to examine if any recent events like COVID-19 have affected the real estate market.
 
-2. We can potentially add more recent data to increase the effectiveness of the model. It would be interesting to examine if any recent events like COVID-19 have affected the real estate market.
+2. This project was purely based on using past average home values to make predictions for the next 10 years. The analysis can be more meaningful if we could take other contributing factors for a home value, such as population, tax rate, school ranking, property size into consideration.
 
 
 ## For More Information
