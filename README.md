@@ -14,17 +14,19 @@ The dataset for this analysis comes from [Zillow Research](https://www.zillow.co
 
 ***
 ## Methods
-This project explores zipcodes in California only (1,224 zipcodes), and calculates average home values from April 1996 to April 1998 to narrow down the list for modeling with top 10 zipcodes with the highest ROI. 
+This project explores zipcodes in California only (1,224 zipcodes), and calculates average home values from April 1996 to April 1998 to narrow down the list for modeling with top 10 zipcodes with the highest ROI to begin with. 
 
 I wanted to be mindful of some financial events that happened in the past (e.g. Housing Bubble and Great Recession, and used the [coefficient of variantion](https://www.investopedia.com/terms/c/coefficientofvariation.asp) to take risk into consideration. This is a very common method being used in finance to determine how much volatility, or risk, is assumed in comparison to the amount of return expected from investments. I've also selected data in 30-70 quartiles to add some variation.
+Our results show that zipcodes in below counties had the highest ROI from April 1996 to April 2018.
 
-After running some simple time series models, we will use the SARIMAX model to forecast the predicted average home values for each zipcode. Then, we will decide the top 5 zipcodes with the highest predicted ROIs in 1 year, 3 years, 5 years, and 10 years. 
+![ca_top_10](./images/ca_top10_counties.png)
+
+For prediction, I ran some time series models, and selected the SARIMAX model that performed the best to forecast the predicted average home values for each zipcode for next 10 years (2018-2028).
 
 ***
 ## Conclusion & Recommendation
-Our results show that zipcodes in below counties had the highest ROI from April 1996 to April 2018.
-![ca_top_10](./images/ca_top10_counties.png)
-Out of those zipcodes, we recommend investing in properties in below zip codes. 
+Out of those zipcodes, we recommend investing in properties in below 5 zip codes as they showed the highest ROI.
+
 ![map](./images/map.png) 
 
 **Zip code 91754 (Monterey Park):** Buy and hold for at least 10 years or more.
