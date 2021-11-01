@@ -30,7 +30,7 @@ Below are the top 5 zipcodes that showed the highest ROI, and the recommendation
 
 ![map](./images/map.png) 
 
-**Zip code 91754 (Monterey Park):** Buy and hold for at least 10 years or more.
+**Zip code 91754 (Orange):** Buy and hold for at least 10 years or more.
 
 
            Total expected return in 1 year: 2.94%
@@ -39,7 +39,7 @@ Below are the top 5 zipcodes that showed the highest ROI, and the recommendation
            Total expected return in 10 years: 27.9 %
 ![monterey](./images/monterey_park.png)                                  
                                 
-**Zip code 92860 (Norco):** Buy and hold for at least 3 years.
+**Zip code 92860 (Riverside):** Buy and hold for at least 3 years.
 
            Total expected return in 1 year: 2.81%
            Total expected return in 3 years: 4.25%
@@ -47,7 +47,7 @@ Below are the top 5 zipcodes that showed the highest ROI, and the recommendation
            Total expected return in 10 years: 4.49% 
 ![norco](./images/norco.png)                                           
                                   
-**Zip code 96141 (Homewood):** Buy and hold for at least 10 years or more.
+**Zip code 96141 (Placer):** Buy and hold for at least 10 years or more.
 
            Total expected return in 1 year: 9.06%
            Total expected return in 3 years: 26.99%
@@ -63,7 +63,7 @@ Below are the top 5 zipcodes that showed the highest ROI, and the recommendation
            Total expected return in 10 years 4.08%
  ![san_luis_obispo](./images/san_luis_obispo.png) 
 
-**Zip code 94546 (Castro Valley):** Buy and hold for at least 10 years or more.
+**Zip code 94546 (Alameda):** Buy and hold for at least 10 years or more.
 
            Total expected return in 1 year: 3.19%
            Total expected return in 3 years: 9.5%
