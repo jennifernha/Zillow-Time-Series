@@ -36,7 +36,7 @@ Below are the top 5 zipcodes that showed the highest ROI, and the recommendation
            Total expected return in 1 year: 2.94%
            Total expected return in 3 years: 8.74%
            Total expected return in 5 years: 14.42%
-           Total expected return in 10 years: 27.9 %
+           Total expected return in 10 years: 27.90%
 ![monterey](./images/monterey_park.png)                                  
                                 
 **Zip code 92860 (Riverside):** Buy and hold for at least 3 years.
@@ -66,7 +66,7 @@ Below are the top 5 zipcodes that showed the highest ROI, and the recommendation
 **Zip code 94546 (Alameda):** Buy and hold for at least 10 years or more.
 
            Total expected return in 1 year: 3.19%
-           Total expected return in 3 years: 9.5%
+           Total expected return in 3 years: 9.50%
            Total expected return in 5 years: 15.72%
            Total expected return in 10 years: 30.62%
  ![castro_valley](./images/castro_valley.png) 
