@@ -25,7 +25,7 @@ For prediction, I ran some time series models, and selected the SARIMAX model th
 
 ***
 ## Conclusion & Recommendation
-Out of those zipcodes, we recommend investing in properties in below 5 zip codes as they showed the highest ROI.
+Below are the top 5 zipcodes that showed the highest ROI, and the recommendation on short-term vs. long-term investment decision.
 
 ![map](./images/map.png) 
 
@@ -36,7 +36,7 @@ Out of those zipcodes, we recommend investing in properties in below 5 zip codes
            Total expected return in 3 years: 8.74%
            Total expected return in 5 years: 14.42%
            Total expected return in 10 years: 27.9 %
-![monterey](./images/monterey.png)                                  
+![monterey](./images/monterey_park.png)                                  
                                 
 **Zip code 92860 (Norco):** Buy and hold for at least 3 years.
 
