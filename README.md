@@ -14,10 +14,11 @@ The dataset for this analysis comes from [Zillow Research](https://www.zillow.co
 
 ***
 ## Methods
-This project explores zipcodes in California only (1,224 zipcodes), and calculates average home values from April 1996 to April 1998 to narrow down the list for modeling with top 10 zipcodes with the highest ROI to begin with. 
+This project explores zipcodes in California only (1,224 zipcodes), and calculates average home values from April 1996 to April 1998 to narrow down the list for modeling with zipcodes with the highest average ROI in top 10 counties to begin with. 
 
 I wanted to be mindful of some financial events that happened in the past (e.g. Housing Bubble and Great Recession, and used the [coefficient of variantion](https://www.investopedia.com/terms/c/coefficientofvariation.asp) to take risk into consideration. This is a very common method being used in finance to determine how much volatility, or risk, is assumed in comparison to the amount of return expected from investments. I've also selected data in 30-70 quartiles to add some variation.
-Our results show that zipcodes in below counties had the highest ROI from April 1996 to April 2018.
+
+Our results show that zipcodes in below counties had the highest ROI between April 1996 and April 2018.
 
 ![ca_top_10](./images/ca_top10_counties.png)
 
