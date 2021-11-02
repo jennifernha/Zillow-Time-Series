@@ -21,7 +21,8 @@ I wanted to be mindful of some financial events that happened in the past (e.g. 
 For prediction, I ran some time series models, and selected the SARIMAX model that performed the best to forecast the predicted average home values for each zipcode for the next 10 years (2018-2028).
 ***
 ## Results
-Our results showed that below counties had the highest ROI between April 1996 and April 2018. 
+Our results showed that below counties had the highest ROI between April 1996 and April 2018.
+
 ![map](./images/map1.png) 
 
 All counties showed at least 125% of ROI on average since 1996. Out of those counties, Orange, Alameda, and San Luis Obispo counties had the highest ROI around 200%.
